@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-848e62875ff3670501b","applicationID":"803428684","transactionName":"JgpeEhRfVF4HQx0VFwcJWQVJU1RbDFhRFk0MC1QDHg==","queueTime":3,"applicationTime":138,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-848e62875ff3670501b",applicationID:"803428684"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1197.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <title>MarylandVax</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="PXgT0pM/MCIohxGJBCie4c7pdKJQd1CaphTGwOQU7+IxLJWcPav8iWnsR7xNTRcFEtkEDceqwYJ2wc23bNFg7Q==" />
+    
+    <!-- Google Tag Manager -->
+<script>
+document.addEventListener('turbolinks:load', function(event) {
+  var url = event.data.url;  dataLayer.push({
+    'event':'pageView',
+    'virtualUrl': url
+  });
+});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer', "GTM-52N4WP3");
+</script>
+<!-- End Google Tag Manager -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="/assets/application-d3e6d05ed36033c61eee2d2c83ef5658d6d5504e0b7129572581bc3d90824f92.css" data-turbolinks-track="reload" />
+    <script src="/packs/js/application-3039c0280f83f523b5d0.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="screen" href="/packs/css/application-08295860.css" data-turbolinks-track="reload" />
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+  </head>
+
+  <body data-controller="main">
+    <script>
+//<![CDATA[
+
+      window.I18n = {"errors":{"dob_in_past":"Date of Birth must be in past.","consent_for_adult":"You cannot consent for an adult over 19 years old.","covid_consent_for_adult":"You may not consent for another adult.","covid_consent_for_child":"This child is not eligible for a COVID-19 vaccination.","pfizer_message":"People under 16 years old are not eligible for Covid clinics.","moderna_message":"People under 18 years old are not eligible for Covid clinics."},"views":{"registration":{"edit_appointment":{"no_appointment":"No"}}}}
+
+//]]>
+</script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52N4WP3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+    <div class="main-container">
+        <div class="flex justify-between items-center">
+            <div class="flex mb-8 ">
+    <a href="/">
+      <img class="mt-6 h-32 logo-prepmod" src="/assets/prepmod-logo-629fbb91bb5a41199a621bb0e2ed4d5c959702a60d0e9c2597cc09f9e40fff51.png" />
+</a>
+    <img class="ml-2 " src="/assets/maryland-logo-3db9cd619cec4648134644d569b60d1d34a15f8c8e7b04b22da9d68dc45461e9.png" />
+
+</div>
+
+
+            <div class="flex">
+    <a class="mr-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow bg-gray-200" rel="nofollow" data-method="patch" href="/language?locale=en&amp;return_to=https%3A%2F%2Fwww.marylandvax.org%2Fclinic%2Fsearch%3Fpage%3D2">EN</a>
+    <a class="mr-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow " rel="nofollow" data-method="patch" href="/language?locale=es&amp;return_to=https%3A%2F%2Fwww.marylandvax.org%2Fclinic%2Fsearch%3Fpage%3D2">ES</a>
+  </div>
+
+        </div>
+
+      <h2 class="main-title">Find a Vaccination Clinic</h2>
+
+<form class="clinic_search" id="clinic_search" action="/clinic/search" accept-charset="UTF-8" method="get">
+  <div class="field-side-by-side">
+      <div>
+        <h2 class="title"> Which service(s) are you seeking? </h2>
+        <div class="checkboxes-container">
+            <div class="">
+              <label>
+                <input type="checkbox" name="q[services_name_in][]" id="Testing" value="Testing" class="form-checkbox" />
+                Testing
+              </label>
+            </div>
+            <div class="">
+              <label>
+                <input type="checkbox" name="q[services_name_in][]" id="Vaccination" value="Vaccination" class="form-checkbox" />
+                Vaccination
+              </label>
+            </div>
+            <div class="">
+              <label>
+                <input type="checkbox" name="q[services_name_in][]" id="Screening" value="Screening" class="form-checkbox" />
+                Screening
+              </label>
+            </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title"> Age Group of Person(s) Seeking Services </h2>
+        <div class="checkboxes-container" data-controller="validations">
+            <div>
+              <label>
+                <input type="checkbox" name="q[age_groups_name_in][]" id="All Ages" value="All Ages" class="form-checkbox" />
+                <span class="label_all-ages"> All Ages</span>
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="q[age_groups_name_in][]" id="Children" value="Children" class="form-checkbox" />
+                <span class="label_children"> Children (0 - 17 yrs)</span>
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="q[age_groups_name_in][]" id="Adults" value="Adults" class="form-checkbox" />
+                <span class="label_adults"> Adults (18- 64)</span>
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="q[age_groups_name_in][]" id="Seniors" value="Seniors" class="form-checkbox" />
+                <span class="label_seniors"> Seniors (65+)</span>
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="q[age_groups_name_in][]" id="Other" value="Other" class="form-checkbox" />
+                <span class="label_other"> Other</span>
+              </label>
+            </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="flex">
+      <div class="w-6/12 mr-4">
+        <h2 class="search-field-title">
+          Search by Address
+        </h2>
+        <input type="text" name="location" id="autocomplete" class="form-input w-full autocomplete-complete-address" placeholder="Enter Address" />
+        
+  <script>
+    var autocomplete, placeSearch, queryText;
+
+    var componentForm = {
+      // street_number: 'long_name',
+      // route: 'long_name',
+      locality: 'long_name',
+      administrative_area_level_1: 'short_name',
+      // country: 'long_name',
+      postal_code: 'short_name'
+    };
+
+    function initAutocomplete() {
+      // Create the autocomplete object, restricting the search predictions to
+      // geographical location types.
+      autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById('autocomplete'), {
+          types: []
+        });
+
+      // Avoid paying for data that you don't need by restricting the set of
+      // place fields that are returned to just the address components.
+      autocomplete.setFields(['address_component', 'formatted_address']);
+
+      // When the user selects an address from the drop-down, populate the
+      // address fields in the form.
+      autocomplete.addListener('place_changed', fillInAddress);
+
+      $(document).on('mousedown', '.pac-item', function (e) {
+        queryText = $(this).find('.pac-item-query').text();
+      })
+    }
+
+    function fillInAddress() {
+      // Get the place details from the autocomplete object.
+      var place = autocomplete.getPlace();
+      $('#autocomplete').val(queryText);
+      $('.autocomplete-complete-address').val(place.formatted_address);
+
+      for (var component in componentForm) {
+        document.getElementById(component).value = '';
+        document.getElementById(component).disabled = false;
+      }
+
+      formatted_address_elem = $('#formatted_address')
+      if (formatted_address_elem) {
+        $(formatted_address_elem).val(queryText)
+      }
+
+      // Get each component of the address from the place details,
+      // and then fill-in the corresponding field on the form.
+      for (var i = 0; i < place.address_components.length; i++) {
+        var addressType = place.address_components[i].types[0];
+        if (componentForm[addressType]) {
+          document.getElementById(addressType).value = place.address_components[i][componentForm[addressType]];
+        }
+      }
+    }
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+      // if (navigator.geolocation) {
+      //     navigator.geolocation.getCurrentPosition(function(position) {
+      //         var geolocation = {
+      //             lat: position.coords.latitude,
+      //             lng: position.coords.longitude
+      //         };
+      //         var circle = new google.maps.Circle({
+      //             center: geolocation,
+      //             radius: position.coords.accuracy
+      //         });
+      //         autocomplete.setBounds(circle.getBounds());
+      //     });
+      // }
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwGy73dxP4hrGhNU1ZU2D653cBLiZMAW0&amp;libraries=places&amp;callback=initAutocomplete"></script>
+  
+
+      </div>
+      <div class="w-6/12">
+        <h2 class="search-field-title">
+          Search Within
+        </h2>
+
+        <select name="search_radius" id="search_radius" class="form-select block w-full"><option value="All">All</option>
+<option value="1 mile">1 mile</option>
+<option value="5 miles">5 miles</option>
+<option value="10 miles">10 miles</option>
+<option value="25 miles">25 miles</option>
+<option value="50 miles">50 miles</option>
+<option value="100 miles">100 miles</option>
+<option value="100+ miles">100+ miles</option></select>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="w-4/12 mr-4">
+        <h2 class="search-field-title">
+          Search by Name of Location
+        </h2>
+        <input class="form-input block w-full" type="text" name="q[venue_search_name_or_venue_name_i_cont]" id="q_venue_search_name_or_venue_name_i_cont" />
+      </div>
+
+      <div class="w-4/12 mr-4">
+        <h2 class="search-field-title">
+          Search by Date
+        </h2>
+
+        <input class="form-input block w-full" data-controller="flatpickr" type="text" name="q[clinic_date_eq]" id="q_clinic_date_eq" />
+      </div>
+
+    </div>
+
+    <div class="flex justify-center">
+      <input type="submit" name="commit" value="Search" class="button-primary" data-disable-with="Search" />
+      <a class="button-primary" href="/clinic/search">Reset</a>
+    </div>
+</form>
+<div class="mt-24 pt-4 border-t border-gray-200">
+      <div class="field-fullwidth">
+        <div class="flex">
+          <div class="flex-1 text-gray-800 text-base">
+            <h1 class="title">Baltimore City Health Department TIKE Clinic - No CoVID-19 on 02/18/2021</h1>
+            <h4>1200 E Fayette St, Baltimore MD, 21202 </h4>
+            <p>
+              <strong>Vaccinations offered:</strong> Contact Clinic Site
+            </p>
+            <p>
+              <strong>Age groups served:</strong> Children, Adults, Seniors
+            </p>
+            <p>
+              <strong>Services offered:</strong> Vaccination
+            </p>
+
+              <p>
+                <strong>Additional Information:</strong> For additional information  Phone: 410-396-4454.  Web: https://health.baltimorecity.gov/programs/immunizations.
+* The Coronavirus (CoVID-19) Vaccine is Not Available *
+              </p>
+
+            <p><strong>Clinic Hours
+              :</strong> 10:00 am - 02:00 pm</p>
+
+              <p><strong>Available Appointments
+                :</strong> 29</p>
+
+                        <p class="w-6/12 my-3">
+                            <a class="button-primary px-4" href="/client/registration?clinic_id=4755">
+                                    Sign Up for Childhood Vaccinations
+</a>                        </p>
+                </div>
+                <img alt="Map" class="flex-none" src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&amp;size=400x280&amp;markers=size%3Asmall%7Ccolor%3Ared%7C39.2925318%2C+-76.60096879999999&amp;key=AIzaSyDwGy73dxP4hrGhNU1ZU2D653cBLiZMAW0&amp;signature=SouJ1TBjO2WD-b5fFTT0pL0VQt0%3D" />
+            </div>
+      </div>
+      <div class="field-fullwidth">
+        <div class="flex">
+          <div class="flex-1 text-gray-800 text-base">
+            <h1 class="title">Baltimore City Health Department TIKE Clinic - No CoVID-19 on 02/23/2021</h1>
+            <h4>1200 E Prince George, Baltimore MD, 21202 </h4>
+            <p>
+              <strong>Vaccinations offered:</strong> Contact Clinic Site
+            </p>
+            <p>
+              <strong>Age groups served:</strong> Children, Adults, Seniors
+            </p>
+            <p>
+              <strong>Services offered:</strong> Vaccination
+            </p>
+
+              <p>
+                <strong>Additional Information:</strong> For additional information  Phone: 410-396-4454.  Web: https://health.baltimorecity.gov/programs/immunizations.
+* The Coronavirus (CoVID-19) Vaccine is Not Available *
+              </p>
+
+            <p><strong>Clinic Hours
+              :</strong> 10:00 am - 02:00 pm</p>
+
+              <p><strong>Available Appointments
+                :</strong> 32</p>
+
+                        <p class="w-6/12 my-3">
+                            <a class="button-primary px-4" href="/client/registration?clinic_id=4756">
+                                    Sign Up for Childhood Vaccinations
+</a>                        </p>
+                </div>
+                <img alt="Map" class="flex-none" src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&amp;size=400x280&amp;markers=size%3Asmall%7Ccolor%3Ared%7C39.2925318%2C+-76.60096879999999&amp;key=AIzaSyDwGy73dxP4hrGhNU1ZU2D653cBLiZMAW0&amp;signature=SouJ1TBjO2WD-b5fFTT0pL0VQt0%3D" />
+            </div>
+      </div>
+      <div class="field-fullwidth">
+        <div class="flex">
+          <div class="flex-1 text-gray-800 text-base">
+            <h1 class="title">Baltimore City Health Department TIKE Clinic - No CoVID-19 on 02/25/2021</h1>
+            <h4>1200 E Prince George, Baltimore MD, 21202 </h4>
+            <p>
+              <strong>Vaccinations offered:</strong> Contact Clinic Site
+            </p>
+            <p>
+              <strong>Age groups served:</strong> Children, Adults, Seniors
+            </p>
+            <p>
+              <strong>Services offered:</strong> Vaccination
+            </p>
+
+              <p>
+                <strong>Additional Information:</strong> For additional information  Phone: 410-396-4454.  Web: https://health.baltimorecity.gov/programs/immunizations.
+* The Coronavirus (CoVID-19) Vaccine is Not Available *
+              </p>
+
+            <p><strong>Clinic Hours
+              :</strong> 10:00 am - 02:00 pm</p>
+
+              <p><strong>Available Appointments
+                :</strong> 32</p>
+
+                        <p class="w-6/12 my-3">
+                            <a class="button-primary px-4" href="/client/registration?clinic_id=4757">
+                                    Sign Up for Childhood Vaccinations
+</a>                        </p>
+                </div>
+                <img alt="Map" class="flex-none" src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&amp;size=400x280&amp;markers=size%3Asmall%7Ccolor%3Ared%7C39.2925318%2C+-76.60096879999999&amp;key=AIzaSyDwGy73dxP4hrGhNU1ZU2D653cBLiZMAW0&amp;signature=SouJ1TBjO2WD-b5fFTT0pL0VQt0%3D" />
+            </div>
+      </div>
+
+  <div class="mt-4 flex justify-center">
+    <nav class="pagy-nav pagination" role="navigation" aria-label="pager"><span class="page prev"><a href="/clinic/search?page=1"   rel="prev" aria-label="previous">&lsaquo;&nbsp;Prev</a></span> <span class="page"><a href="/clinic/search?page=1"   rel="prev" >1</a></span> <span class="page active">2</span> <span class="page next disabled">Next&nbsp;&rsaquo;</span></nav>
+  </div>
+</div>
+
+    </div>
+
+    <div class="pt-32 pb-5 px-6 lg:px-32 bg-white custom-footer_padding">
+  <hr/>
+  <p class="text-gray-600 mt-4 text-xs">
+    &copy; 2021 Multi-State Partnership for Prevention.
+    
+  </p>
+</div>
+
+  </body>
+</html>
